@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		93BD6DF62DA2256500B2B29E /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BD6DF42DA2256500B2B29E /* Question+CoreDataClass.swift */; };
 		93BD6DF72DA2256500B2B29E /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BD6DF52DA2256500B2B29E /* Question+CoreDataProperties.swift */; };
+		93BD6DF92DA2B32900B2B29E /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 93BD6DF82DA2B31F00B2B29E /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +35,7 @@
 		93BD6DE02DA1D14B00B2B29E /* talksyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = talksyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		93BD6DF42DA2256500B2B29E /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
 		93BD6DF52DA2256500B2B29E /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		93BD6DF82DA2B31F00B2B29E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -101,6 +103,7 @@
 				93BD6DD92DA1D14B00B2B29E /* talksyTests */,
 				93BD6DE32DA1D14B00B2B29E /* talksyUITests */,
 				93BD6DBE2DA1D14900B2B29E /* Products */,
+				93BD6DF82DA2B31F00B2B29E /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
@@ -234,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93BD6DF92DA2B32900B2B29E /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
