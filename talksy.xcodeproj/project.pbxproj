@@ -1,0 +1,581 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93BD6DF62DA2256500B2B29E /* Question+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BD6DF42DA2256500B2B29E /* Question+CoreDataClass.swift */; };
+		93BD6DF72DA2256500B2B29E /* Question+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93BD6DF52DA2256500B2B29E /* Question+CoreDataProperties.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		93BD6DD72DA1D14B00B2B29E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93BD6DB52DA1D14800B2B29E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BD6DBC2DA1D14800B2B29E;
+			remoteInfo = talksy;
+		};
+		93BD6DE12DA1D14B00B2B29E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93BD6DB52DA1D14800B2B29E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 93BD6DBC2DA1D14800B2B29E;
+			remoteInfo = talksy;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		93BD6DBD2DA1D14900B2B29E /* talksy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talksy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BD6DD62DA1D14B00B2B29E /* talksyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = talksyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BD6DE02DA1D14B00B2B29E /* talksyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = talksyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		93BD6DF42DA2256500B2B29E /* Question+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataClass.swift"; sourceTree = "<group>"; };
+		93BD6DF52DA2256500B2B29E /* Question+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Question+CoreDataProperties.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		93BD6DE82DA1D14B00B2B29E /* Exceptions for "talksy" folder in "talksy" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 93BD6DBC2DA1D14800B2B29E /* talksy */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		93BD6DBF2DA1D14900B2B29E /* talksy */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				93BD6DE82DA1D14B00B2B29E /* Exceptions for "talksy" folder in "talksy" target */,
+			);
+			path = talksy;
+			sourceTree = "<group>";
+		};
+		93BD6DD92DA1D14B00B2B29E /* talksyTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = talksyTests;
+			sourceTree = "<group>";
+		};
+		93BD6DE32DA1D14B00B2B29E /* talksyUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = talksyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93BD6DBA2DA1D14800B2B29E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BD6DD32DA1D14B00B2B29E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BD6DDD2DA1D14B00B2B29E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93BD6DB42DA1D14800B2B29E = {
+			isa = PBXGroup;
+			children = (
+				93BD6DF42DA2256500B2B29E /* Question+CoreDataClass.swift */,
+				93BD6DF52DA2256500B2B29E /* Question+CoreDataProperties.swift */,
+				93BD6DBF2DA1D14900B2B29E /* talksy */,
+				93BD6DD92DA1D14B00B2B29E /* talksyTests */,
+				93BD6DE32DA1D14B00B2B29E /* talksyUITests */,
+				93BD6DBE2DA1D14900B2B29E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93BD6DBE2DA1D14900B2B29E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93BD6DBD2DA1D14900B2B29E /* talksy.app */,
+				93BD6DD62DA1D14B00B2B29E /* talksyTests.xctest */,
+				93BD6DE02DA1D14B00B2B29E /* talksyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93BD6DBC2DA1D14800B2B29E /* talksy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BD6DE92DA1D14B00B2B29E /* Build configuration list for PBXNativeTarget "talksy" */;
+			buildPhases = (
+				93BD6DB92DA1D14800B2B29E /* Sources */,
+				93BD6DBA2DA1D14800B2B29E /* Frameworks */,
+				93BD6DBB2DA1D14800B2B29E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				93BD6DBF2DA1D14900B2B29E /* talksy */,
+			);
+			name = talksy;
+			packageProductDependencies = (
+			);
+			productName = talksy;
+			productReference = 93BD6DBD2DA1D14900B2B29E /* talksy.app */;
+			productType = "com.apple.product-type.application";
+		};
+		93BD6DD52DA1D14B00B2B29E /* talksyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BD6DEE2DA1D14B00B2B29E /* Build configuration list for PBXNativeTarget "talksyTests" */;
+			buildPhases = (
+				93BD6DD22DA1D14B00B2B29E /* Sources */,
+				93BD6DD32DA1D14B00B2B29E /* Frameworks */,
+				93BD6DD42DA1D14B00B2B29E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BD6DD82DA1D14B00B2B29E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				93BD6DD92DA1D14B00B2B29E /* talksyTests */,
+			);
+			name = talksyTests;
+			packageProductDependencies = (
+			);
+			productName = talksyTests;
+			productReference = 93BD6DD62DA1D14B00B2B29E /* talksyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		93BD6DDF2DA1D14B00B2B29E /* talksyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93BD6DF12DA1D14B00B2B29E /* Build configuration list for PBXNativeTarget "talksyUITests" */;
+			buildPhases = (
+				93BD6DDC2DA1D14B00B2B29E /* Sources */,
+				93BD6DDD2DA1D14B00B2B29E /* Frameworks */,
+				93BD6DDE2DA1D14B00B2B29E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93BD6DE22DA1D14B00B2B29E /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				93BD6DE32DA1D14B00B2B29E /* talksyUITests */,
+			);
+			name = talksyUITests;
+			packageProductDependencies = (
+			);
+			productName = talksyUITests;
+			productReference = 93BD6DE02DA1D14B00B2B29E /* talksyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93BD6DB52DA1D14800B2B29E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					93BD6DBC2DA1D14800B2B29E = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					93BD6DD52DA1D14B00B2B29E = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 93BD6DBC2DA1D14800B2B29E;
+					};
+					93BD6DDF2DA1D14B00B2B29E = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = 93BD6DBC2DA1D14800B2B29E;
+					};
+				};
+			};
+			buildConfigurationList = 93BD6DB82DA1D14800B2B29E /* Build configuration list for PBXProject "talksy" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93BD6DB42DA1D14800B2B29E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 93BD6DBE2DA1D14900B2B29E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93BD6DBC2DA1D14800B2B29E /* talksy */,
+				93BD6DD52DA1D14B00B2B29E /* talksyTests */,
+				93BD6DDF2DA1D14B00B2B29E /* talksyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93BD6DBB2DA1D14800B2B29E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BD6DD42DA1D14B00B2B29E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BD6DDE2DA1D14B00B2B29E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93BD6DB92DA1D14800B2B29E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93BD6DF62DA2256500B2B29E /* Question+CoreDataClass.swift in Sources */,
+				93BD6DF72DA2256500B2B29E /* Question+CoreDataProperties.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BD6DD22DA1D14B00B2B29E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93BD6DDC2DA1D14B00B2B29E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		93BD6DD82DA1D14B00B2B29E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BD6DBC2DA1D14800B2B29E /* talksy */;
+			targetProxy = 93BD6DD72DA1D14B00B2B29E /* PBXContainerItemProxy */;
+		};
+		93BD6DE22DA1D14B00B2B29E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 93BD6DBC2DA1D14800B2B29E /* talksy */;
+			targetProxy = 93BD6DE12DA1D14B00B2B29E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		93BD6DEA2DA1D14B00B2B29E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = talksy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.saint.talksy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		93BD6DEB2DA1D14B00B2B29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = talksy/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.saint.talksy;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		93BD6DEC2DA1D14B00B2B29E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		93BD6DED2DA1D14B00B2B29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93BD6DEF2DA1D14B00B2B29E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.saint.talksyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/talksy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/talksy";
+			};
+			name = Debug;
+		};
+		93BD6DF02DA1D14B00B2B29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.saint.talksyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/talksy.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/talksy";
+			};
+			name = Release;
+		};
+		93BD6DF22DA1D14B00B2B29E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.saint.talksyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = talksy;
+			};
+			name = Debug;
+		};
+		93BD6DF32DA1D14B00B2B29E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.saint.talksyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = talksy;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93BD6DB82DA1D14800B2B29E /* Build configuration list for PBXProject "talksy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BD6DEC2DA1D14B00B2B29E /* Debug */,
+				93BD6DED2DA1D14B00B2B29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BD6DE92DA1D14B00B2B29E /* Build configuration list for PBXNativeTarget "talksy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BD6DEA2DA1D14B00B2B29E /* Debug */,
+				93BD6DEB2DA1D14B00B2B29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BD6DEE2DA1D14B00B2B29E /* Build configuration list for PBXNativeTarget "talksyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BD6DEF2DA1D14B00B2B29E /* Debug */,
+				93BD6DF02DA1D14B00B2B29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93BD6DF12DA1D14B00B2B29E /* Build configuration list for PBXNativeTarget "talksyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93BD6DF22DA1D14B00B2B29E /* Debug */,
+				93BD6DF32DA1D14B00B2B29E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93BD6DB52DA1D14800B2B29E /* Project object */;
+}
