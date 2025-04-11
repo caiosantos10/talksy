@@ -26,6 +26,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.dataSource = self;
         tableView.frame = view.bounds;
         
+        getAllQuestions();
+        
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add,
                                                             target: self,
                                                             action: #selector(addQuestion));
@@ -59,6 +61,47 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath);
         cell.textLabel?.text = model.sentence;
         return cell;
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true);
+        
+        let item = models[indexPath.row];
+        
+        let sheet = UIAlertController(title: "Edit Question",
+                                      message: "Enter new Question",
+                                      preferredStyle: .actionSheet);
+        
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil));
+        
+        sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
+            let alert = UIAlertController(title: "Edit Question",
+                                          message: "Edit your  Question",
+                                          preferredStyle: .alert);
+            
+            alert.addTextField(configurationHandler: nil);
+            alert.textFields?.first?.text = item.sentence;
+            alert.addAction(UIAlertAction(title: "Save", style: .cancel, handler: { [weak self] _ in
+                guard let field =  alert.textFields?.first, let text = field.text, !text.isEmpty else {
+                    return
+                }
+                let resposta = " ";
+                self?.updateQuestion(question: item, // obj a ser atualizado
+                                     sentence: text, // informações novas...
+                                     translation: text,
+                                     user_answer: resposta.data(using: .utf8)!,
+                                     feedback: 0,
+                                     pronunciation: resposta.data(using: .utf8)!)
+            }));
+            self.present(alert, animated: true);
+            
+        }));
+        
+        sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { [weak self] _ in
+            self?.deleteQuestion(question: item)
+        }));
+        
+        present(sheet, animated: true);
     }
     
     // Core Data
@@ -124,6 +167,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             try context.save();
+            getAllQuestions();
         } catch {
             // throw error
         }
