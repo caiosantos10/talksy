@@ -147,6 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         do {
             try context.save();
+            getAllQuestions();
         } catch {
             
         }
