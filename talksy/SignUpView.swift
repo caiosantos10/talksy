@@ -1,55 +1,58 @@
 //
-//  SignInView.swift
+//  SignUpView.swift
 //  talksy
 //
-//  Created by Caio Santos on 02/07/25.
+//  Created by Caio Santos on 03/07/25.
 //
 
 import SwiftUI
 
-struct SignInView: View {
+struct SignUpView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
     @State private var errorMessage: String?
-    @State private var showSignUp = false
     
-    var switchToSignUp: () -> Void
+    var switchToLogin: () -> Void
 
     var body: some View {
         ZStack {
             Color(.systemGray6)
                 .ignoresSafeArea()
             VStack(spacing: 24) {
-                Image(systemName: "text.bubble")
-                    .resizable().scaledToFit()
-                    .frame(width: 64, height: 64)
+                Image(systemName: "person.crop.circle.badge.plus")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 60, height: 60)
                     .foregroundColor(.blue)
                     .padding(.bottom, 8)
-                Text("Talksy")
+                Text("Create account")
                     .font(.largeTitle)
                     .fontWeight(.bold)
-                    .padding(.bottom, 16)
-
+                    .padding(.bottom, 8)
+                TextField("Nome", text: $name)
+                    .autocapitalization(.words)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                    .padding(.horizontal)
                 TextField("Email", text: $email)
                     .autocapitalization(.none)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
-
                 SecureField("Senha", text: $password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.horizontal)
-
                 if let error = errorMessage {
                     Text(error)
                         .foregroundColor(.red)
                 }
-
-                Button("Entrar") {
-                    if email.isEmpty || password.isEmpty {
+                Button("Cadastrar") {
+                    if name.isEmpty || email.isEmpty || password.isEmpty {
                         errorMessage = "Preencha todos os campos"
                     } else {
                         errorMessage = nil
-                        // Aqui entra a lógica de autenticação real
+                        // Aqui, futuramente, você salva o usuário
+                        presentationMode.wrappedValue.dismiss()
                     }
                 }
                 .padding()
@@ -59,12 +62,11 @@ struct SignInView: View {
                 .cornerRadius(10)
                 .padding(.horizontal)
                 
-                Button("Cadastre-se") {
-                    switchToSignUp()
+                Button("Já tenho conta. Entrar") {
+                    switchToLogin()
                 }
                 .foregroundColor(.blue)
                 .padding(.top, 10)
-                
             }
         }
     }
