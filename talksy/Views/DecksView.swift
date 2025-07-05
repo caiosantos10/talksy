@@ -20,15 +20,17 @@ struct DecksView: View {
             VStack(alignment: .leading, spacing: 24) {
                 List {
                     ForEach(decks) { deck in
-                        VStack(alignment: .leading, spacing: 4) {
-                            Text(deck.title)
-                                .font(.headline)
-                                .foregroundColor(.blue)
-                            Text(deck.description)
-                                .font(.subheadline)
-                                .foregroundColor(.gray)
+                        NavigationLink(destination: DeckPhrasesView(deck: deck)) {
+                            VStack(alignment: .leading, spacing: 4) {
+                                Text(deck.title)
+                                    .font(.headline)
+                                    .foregroundColor(.blue)
+                                Text(deck.description)
+                                    .font(.subheadline)
+                                    .foregroundColor(.gray)
+                            }
+                            .padding(.vertical, 8)
                         }
-                        .padding(.vertical, 8)
                     }
                 }
                 .listStyle(.plain)

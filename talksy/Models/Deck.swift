@@ -12,5 +12,5 @@ struct Deck: Identifiable {
     let id: UUID
     var title: String
     var description: String
-    // No futuro: var phrases: [Phrase]
+    var phrases: [Phrase] = []
 }
