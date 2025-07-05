@@ -10,9 +10,26 @@ import SwiftUI
 
 struct DecksView: View {
     @State private var decks: [Deck] = [
-        Deck(id: UUID(), title: "Saudações Básicas", description: "Cumprimente pessoas e faça amizades"),
-        Deck(id: UUID(), title: "Viagem", description: "Frases úteis para viagens"),
-        Deck(id: UUID(), title: "Trabalho", description: "Vocabulário para o ambiente profissional")
+        Deck(
+           id: UUID(),
+           title: "Saudações",
+           description: "Cumprimente pessoas",
+           phrases: [
+               Phrase(id: UUID(), english: "Hello!", portuguese: "Olá!"),
+               Phrase(id: UUID(), english: "How are you?", portuguese: "Como você está?"),
+               Phrase(id: UUID(), english: "Good morning!", portuguese: "Bom dia!")
+           ]
+       ),
+       Deck(
+           id: UUID(),
+           title: "Viagem",
+           description: "Frases úteis para viagens",
+           phrases: [
+               Phrase(id: UUID(), english: "Where is the hotel?", portuguese: "Onde fica o hotel?"),
+               Phrase(id: UUID(), english: "I need a taxi.", portuguese: "Eu preciso de um táxi.")
+           ]
+       )
+
     ]
 
     var body: some View {

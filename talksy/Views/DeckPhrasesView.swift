@@ -13,14 +13,16 @@ struct DeckPhrasesView: View {
 
     var body: some View {
         List(deck.phrases) { phrase in
-            VStack(alignment: .leading) {
-                Text(phrase.english)
-                    .font(.headline)
-                Text(phrase.portuguese)
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
+            NavigationLink(destination: FlashcardView(phrase: phrase)) {
+                VStack(alignment: .leading) {
+                    Text(phrase.english)
+                        .font(.headline)
+                    Text(phrase.portuguese)
+                        .font(.subheadline)
+                        .foregroundColor(.gray)
+                }
+                .padding(.vertical, 8)
             }
-            .padding(.vertical, 8)
         }
         .navigationTitle(deck.title)
     }

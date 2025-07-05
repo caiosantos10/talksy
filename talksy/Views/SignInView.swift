@@ -14,6 +14,7 @@ struct SignInView: View {
     @State private var showSignUp = false
     
     var switchToSignUp: () -> Void
+    var onLogin: () -> Void
 
     var body: some View {
         ZStack {
@@ -50,6 +51,7 @@ struct SignInView: View {
                     } else {
                         errorMessage = nil
                         // Aqui entra a lógica de autenticação real
+                        onLogin()
                     }
                 }
                 .padding()
