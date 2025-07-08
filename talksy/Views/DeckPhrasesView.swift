@@ -9,7 +9,9 @@
 import SwiftUI
 
 struct DeckPhrasesView: View {
-    var deck: Deck
+    @Binding var deck: Deck
+    
+    @State private var showingAddPhrase = false
 
     var body: some View {
         List(deck.phrases) { phrase in
@@ -25,14 +27,34 @@ struct DeckPhrasesView: View {
             }
         }
         .navigationTitle(deck.title)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: { showingAddPhrase = true }) {
+                    Image(systemName: "plus")
+                }
+            }
+        }
+        .sheet(isPresented: $showingAddPhrase) {
+            AddPhraseView { newPhrase in
+                deck.phrases.append(newPhrase)
+            }
+        }
     }
 }
 
 #Preview {
-    let samplePhrases = [
-        Phrase(id: UUID(), english: "Hello!", portuguese: "Olá!"),
-        Phrase(id: UUID(), english: "How are you?", portuguese: "Como você está?")
-    ]
-    let sampleDeck = Deck(id: UUID(), title: "Saudações", description: "Cumprimente pessoas", phrases: samplePhrases)
-    return DeckPhrasesView(deck: sampleDeck)
+    DeckPhrasesView(
+        deck: .constant(
+            Deck(
+                id: UUID(),
+                title: "Saudações",
+                description: "Cumprimente pessoas",
+                phrases: [
+                    Phrase(id: UUID(), english: "Hello!", portuguese: "Olá!"),
+                    Phrase(id: UUID(), english: "How are you?", portuguese: "Como você está?")
+                ]
+            )
+        )
+    )
 }
+

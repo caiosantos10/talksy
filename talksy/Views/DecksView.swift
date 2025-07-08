@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct DecksView: View {
+    @State private var showingAddDeck = false
     @State private var decks: [Deck] = [
         Deck(
            id: UUID(),
@@ -29,15 +30,14 @@ struct DecksView: View {
                Phrase(id: UUID(), english: "I need a taxi.", portuguese: "Eu preciso de um táxi.")
            ]
        )
-
     ]
 
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 24) {
                 List {
-                    ForEach(decks) { deck in
-                        NavigationLink(destination: DeckPhrasesView(deck: deck)) {
+                    ForEach($decks) { $deck in
+                        NavigationLink(destination: DeckPhrasesView(deck: $deck)) {
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(deck.title)
                                     .font(.headline)
@@ -45,6 +45,13 @@ struct DecksView: View {
                                 Text(deck.description)
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
+                                HStack(spacing: 4) {
+                                    Image(systemName: "text.quote") // Ícone opcional
+                                        .foregroundColor(.gray)
+                                    Text("\(deck.phrases.count) frases")
+                                        .font(.caption)
+                                        .foregroundColor(.gray)
+                                }
                             }
                             .padding(.vertical, 8)
                         }
@@ -53,6 +60,18 @@ struct DecksView: View {
                 .listStyle(.plain)
             }
             .navigationTitle("Meus Decks")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: { showingAddDeck = true }) {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+            .sheet(isPresented: $showingAddDeck) {
+                AddDeckView(onAdd: { newDeck in
+                    decks.append(newDeck)
+                })
+            }
         }
     }
 }
