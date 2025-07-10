@@ -10,20 +10,25 @@ import SwiftUI
 
 struct DeckPhrasesView: View {
     @Binding var deck: Deck
-    
+    @State private var editingPhrase: Phrase? = nil
     @State private var showingAddPhrase = false
-    
     @State private var showFlashcards = false
 
     var body: some View {
-        List(deck.phrases) { phrase in
-            NavigationLink(destination: FlashcardView(phrase: phrase)) {
-                VStack(alignment: .leading) {
-                    Text(phrase.english)
-                        .font(.headline)
-                    Text(phrase.portuguese)
-                        .font(.subheadline)
-                        .foregroundColor(.gray)
+        List {
+            ForEach($deck.phrases) { $phrase in
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text(phrase.english)
+                            .font(.headline)
+                        Text(phrase.portuguese)
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
+                    Button {
+                        editingPhrase = phrase
+                    } label: {}
                 }
                 .padding(.vertical, 8)
             }
@@ -39,6 +44,13 @@ struct DeckPhrasesView: View {
         .sheet(isPresented: $showingAddPhrase) {
             AddPhraseView { newPhrase in
                 deck.phrases.append(newPhrase)
+            }
+        }
+        .sheet(item: $editingPhrase) { phrase in
+            AddPhraseView(phrase: phrase) { updatedPhrase in
+                if let idx = deck.phrases.firstIndex(where: { $0.id == updatedPhrase.id }) {
+                    deck.phrases[idx] = updatedPhrase
+                }
             }
         }
         Button(action: {
