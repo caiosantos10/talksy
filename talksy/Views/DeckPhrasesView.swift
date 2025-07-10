@@ -32,6 +32,9 @@ struct DeckPhrasesView: View {
                 }
                 .padding(.vertical, 8)
             }
+            .onDelete { indices in
+                deck.phrases.remove(atOffsets: indices)
+            }
         }
         .navigationTitle(deck.title)
         .toolbar {
