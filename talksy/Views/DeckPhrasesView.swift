@@ -12,6 +12,8 @@ struct DeckPhrasesView: View {
     @Binding var deck: Deck
     
     @State private var showingAddPhrase = false
+    
+    @State private var showFlashcards = false
 
     var body: some View {
         List(deck.phrases) { phrase in
@@ -39,6 +41,25 @@ struct DeckPhrasesView: View {
                 deck.phrases.append(newPhrase)
             }
         }
+        Button(action: {
+            showFlashcards = true
+        }) {
+            HStack {
+                Image(systemName: "rectangle.stack")
+                Text("Estudar todas")
+            }
+            .padding()
+            .background(Color.blue)
+            .foregroundColor(.white)
+            .cornerRadius(10)
+        }
+        .sheet(isPresented: $showFlashcards) {
+            NavigationStack {
+                FlashcardsSessionView(phrases: deck.phrases)
+            }
+        }
+
+
     }
 }
 
