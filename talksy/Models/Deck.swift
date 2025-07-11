@@ -8,9 +8,20 @@
 
 import Foundation
 
-struct Deck: Identifiable {
-    let id: UUID
+import SwiftData
+
+@Model
+class Deck {
+    @Attribute(.unique) var id: UUID
     var title: String
-    var description: String
-    var phrases: [Phrase] = []
+    var details: String
+    @Relationship(deleteRule: .cascade) var phrases: [Phrase]
+
+    init(id: UUID = UUID(), title: String, details: String, phrases: [Phrase] = []) {
+        self.id = id
+        self.title = title
+        self.details = details
+        self.phrases = phrases
+    }
 }
+
