@@ -13,6 +13,7 @@ struct DeckPhrasesView: View {
     @State private var editingPhrase: Phrase? = nil
     @State private var showingAddPhrase = false
     @State private var showFlashcards = false
+    @Environment(\.modelContext) private var context
 
     var body: some View {
         List {
@@ -46,6 +47,7 @@ struct DeckPhrasesView: View {
         }
         .sheet(isPresented: $showingAddPhrase) {
             AddPhraseView { newPhrase in
+                context.insert(newPhrase)  
                 deck.phrases.append(newPhrase)
             }
         }
