@@ -8,8 +8,18 @@
 
 import Foundation
 
-struct Phrase: Identifiable {
-    let id: UUID
+import SwiftData
+
+@Model
+class Phrase {
+    @Attribute(.unique) var id: UUID
     var english: String
     var portuguese: String
+
+    init(id: UUID = UUID(), english: String, portuguese: String) {
+        self.id = id
+        self.english = english
+        self.portuguese = portuguese
+    }
 }
+

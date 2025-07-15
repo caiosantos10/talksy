@@ -9,14 +9,15 @@
 import SwiftUI
 
 struct DeckPhrasesView: View {
-    @Binding var deck: Deck
+    var deck: Deck
     @State private var editingPhrase: Phrase? = nil
     @State private var showingAddPhrase = false
     @State private var showFlashcards = false
+    @Environment(\.modelContext) private var context
 
     var body: some View {
         List {
-            ForEach($deck.phrases) { $phrase in
+            ForEach(deck.phrases) { phrase in
                 HStack {
                     VStack(alignment: .leading) {
                         Text(phrase.english)
@@ -46,6 +47,7 @@ struct DeckPhrasesView: View {
         }
         .sheet(isPresented: $showingAddPhrase) {
             AddPhraseView { newPhrase in
+                context.insert(newPhrase)  
                 deck.phrases.append(newPhrase)
             }
         }
@@ -80,17 +82,15 @@ struct DeckPhrasesView: View {
 
 #Preview {
     DeckPhrasesView(
-        deck: .constant(
-            Deck(
-                id: UUID(),
-                title: "Saudações",
-                description: "Cumprimente pessoas",
-                phrases: [
-                    Phrase(id: UUID(), english: "Hello!", portuguese: "Olá!"),
-                    Phrase(id: UUID(), english: "How are you?", portuguese: "Como você está?")
-                ]
-            )
+        deck: Deck(
+            title: "Saudações",
+            details: "Cumprimente pessoas",
+            phrases: [
+                Phrase(english: "Hello!", portuguese: "Olá!"),
+                Phrase(english: "How are you?", portuguese: "Como você está?")
+            ]
         )
     )
 }
+
 

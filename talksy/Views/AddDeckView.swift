@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AddDeckView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.modelContext) private var context
     @State private var title: String = ""
     @State private var description: String = ""
     var onAdd: (Deck) -> Void
@@ -29,8 +30,8 @@ struct AddDeckView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Adicionar") {
-                        let newDeck = Deck(id: UUID(), title: title, description: description, phrases: [])
-                        onAdd(newDeck)
+                        let newDeck = Deck(id: UUID(), title: title, details: description, phrases: [])
+                        context.insert(newDeck)
                         dismiss()
                     }
                     .disabled(title.isEmpty)
